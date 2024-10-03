@@ -1,0 +1,47 @@
+.profile-head{
+    text-align: center;
+    font-size: 40px;
+}
+.Profile-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.profie-card:hover{
+    outline: solid 2px wheat;
+}
+.profie-card{
+    width: 311px;
+    height: 320px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.5px solid pink;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 20px;
+    border-radius: 4px;
+}
+.profie-card img{
+    border-radius: 100px;
+    padding: 2px;
+    outline: 2px solid rgb(46, 255, 4);
+}
+.social-platform{
+    display: flex;
+    gap: 10px;
+}
+.social-platform a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+.social-platform a:hover{
+    color: blueviolet;
+}
