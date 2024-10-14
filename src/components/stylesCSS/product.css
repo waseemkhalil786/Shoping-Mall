@@ -9,6 +9,35 @@
   gap: 30px;
 }
 
+.Category02{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+
+/* category Chips */
+
+
+.category-head{
+  padding: 25px;
+  border:  2px solid rgb(232, 114, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 20px;
+  width: max-content;
+  cursor: pointer;
+}
+.category-head:hover{
+  color: #929292;
+}
 .main-div {
   width: 300px;
   height: 320px;

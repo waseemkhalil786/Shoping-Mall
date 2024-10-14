@@ -1,7 +1,11 @@
+import Footer from "./fotter";
+import Prodcuts from "./product";
+
 function Services() {
     return(
         <>
-        <h1>Services</h1>
+        <Prodcuts/>
+        <Footer/>
         </>
     )
 }

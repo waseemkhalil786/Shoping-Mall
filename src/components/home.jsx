@@ -1,20 +1,28 @@
+import { Link } from "react-router-dom";
 import Footer from "./fotter";
-import Prodcuts from "./product";
-import ProfileCard from "./profileCard";
+import "./stylesCSS/home.css";
+import HomeCards from "./homesHowCards";
 
 
 function Home() {
   return (
     <>
       <div className="banner">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/006/633/040/original/online-shopping-spring-on-phone-flower-pink-big-sale-banner-marketing-poster-fashion-vector.jpg"
-          width={"100%"}
-        />
+        <div className="head">
+          <h1>Cosmetics that</h1>
+          <h4>Everyone Loves!</h4>
+          <p>
+            We have Huge collection for cosmetics in our paris Branch. <br />{" "}
+            Our Product are always Quality products.
+          </p>
+          <br />
+          <div className="btn">
+            <Link to={"/service"}>Explore Our Products</Link>
+          </div>
+        </div>
       </div>
-      <Prodcuts />
-      <ProfileCard/>
-      <Footer/>
+        <HomeCards/>
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,86 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("https://img.freepik.com/premium-photo/yellow-cart-with-yellow-wheel-that-says-yellow-cart-is-floating-water_337384-105645.jpg?size=626&ext=jpg&ga=GA1.1.1438705649.1707888581&semt=ais_hybrid");
+  flex-wrap: wrap;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner .head {
+  margin: 10px;
+  padding: 50px;
+
+}
+.head h1 {
+  font-size: 50px;
+}
+.head h4 {
+  font-size: 30px;
+  color: rgb(44, 44, 44);
+  font-weight: 580;
+}
+.head p {
+  font-size: 20px;
+  color: rgb(24, 8, 8);
+  font-weight: 580;
+}
+.head .btn {
+  background: #ff478e;
+  width: max-content;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px 5px;
+}
+.head .btn a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 15px;
+}
+/* Show cards  home*/
+
+.main-container{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.main-div-Home {
+  width: 300px;
+  height: 320px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background: #abfff1;
+  box-shadow: #b7e0ff 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+ .img img {
+  width: 200px;
+  height: 150px;
+  background: #ff7272;
+}
+
+.icons{
+  
+  background: #f7f7f7;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 15px;
+}

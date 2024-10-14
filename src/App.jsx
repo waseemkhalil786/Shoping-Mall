@@ -6,9 +6,6 @@ import Contact from "./components/contact";
 import Header from "./components/header";
 import Us from "./components/us";
 
-
-
-
 function App() {
   const router =createBrowserRouter ([
     {

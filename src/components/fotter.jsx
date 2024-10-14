@@ -7,7 +7,7 @@ function Footer() {
       <footer>
         <div className="footer-container">
           <div className="footer-column">
-            <h3>Shoping Mall </h3>
+            <h3>Shoping mall </h3>
             <p>Hi there Costmatic Products are Here</p>
           </div>
           <div className="footer-column">
