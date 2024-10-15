@@ -1,7 +1,7 @@
 import Footer from "./fotter";
 import Prodcuts from "./product";
 
-function Services() {
+function AllProduct() {
     return(
         <>
         <Prodcuts/>
@@ -9,4 +9,4 @@ function Services() {
         </>
     )
 }
-export default Services;
+export default AllProduct;

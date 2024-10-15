@@ -5,47 +5,45 @@ import "./stylesCSS/product.css";
 import CategoryChip from "./CategoryChip";
 
 function Products() {
-  // Fixed typo in component name
   const [products, setProducts] = useState([]); // Fixed case for state
   const [categories, setCategories] = useState([]); // Initialized as empty array
   const [loading, setLoading] = useState(true); // Fixed typo in loading state
+  const [chosenCategory, setChosenCategory] = useState("All");
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await axios.get("https://dummyjson.com/products");
+    console.log("useEffect call ho rhah h bhai kia ho gia ");
+    const url =
+      chosenCategory === "All"
+        ? "https://dummyjson.com/products"
+        : `https://dummyjson.com/products/categories/${chosenCategory}`;  
+        console.log("URL", url);
+      axios
+      .get(url)
+      .then((res) =>{
         setProducts(res.data.products);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false); // Set loading to false after API call
-      }
-    };
-
-    fetchProducts();
-  }, []);
+        setLoading(false);
+      })
+      .catch((err) =>{
+        console.log(err);
+        setLoading(false)
+      });
+  }, [chosenCategory]);
 
   useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const res = await axios.get(
-          "https://dummyjson.com/products/categories"
-        );
-        setCategories(res.data);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false); // Set loading to false after API call
-      }
-    };
-
-    fetchCategories();
+    axios
+    .get("https://dummyjson.com/products/categories")
+    .then((res) =>{
+      setCategories(res.data);
+      setLoading(false);
+    })
+    .catch((err) =>{
+      console.log(err);
+      setLoading(false);
+    });
   }, []);
 
   return (
     <div>
-      <h1 style={{ textAlign: "center", color: "brown" }}>Products</h1>
-
       {loading ? (
         <h1 style={{ textAlign: "center", fontSize: "30px" }}>
           Loading. . . .
@@ -53,8 +51,21 @@ function Products() {
       ) : (
         <div>
           <div className="Category02">
+            <CategoryChip
+              onClick={() => setChosenCategory("All")}
+              isChosen={chosenCategory === "All"}
+              category={{
+                slug: "All",
+                name: "All",  
+              }}
+            />
             {categories.map((category) => (
-              <CategoryChip key={category} category={category} />
+              <CategoryChip
+                onClick={() => setChosenCategory(category.slug)}
+                isChosen={category.slug === chosenCategory}
+                key={category.slug}
+                category={category}
+              />
             ))}
           </div>
           <div className="container">

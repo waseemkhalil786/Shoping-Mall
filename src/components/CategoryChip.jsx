@@ -1,13 +1,13 @@
-import './stylesCSS/product.css'
+import "./stylesCSS/product.css";
 
-function CategoryChip({category}) {
-    const { name } =category
-    return(
-        <div className='CategoriesWis'>
-        <div className="category-head">
-            <h3>{name}</h3>
-        </div>
-        </div>
-    )
+function CategoryChip({ category, isChosen, onClick }) {
+  console.log("is chosen=>", isChosen);
+
+  const { name } = category;
+  return (
+    <div onClick={onClick} className={`${isChosen}? category-head`}>
+      <h3>{name}</h3>
+    </div>
+  );
 }
 export default CategoryChip;

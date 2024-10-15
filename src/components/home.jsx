@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Footer from "./fotter";
 import "./stylesCSS/home.css";
 import HomeCards from "./homesHowCards";
@@ -23,6 +23,7 @@ function Home() {
       </div>
         <HomeCards/>
       <Footer />
+      <Outlet/>
     </>
   );
 }

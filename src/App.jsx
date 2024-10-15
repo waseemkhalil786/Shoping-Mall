@@ -1,39 +1,32 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Outlet,
+  Route,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
 import Home from "./components/home";
 import About from "./components/about";
-import Services from "./components/services";
+
 import Contact from "./components/contact";
 import Header from "./components/header";
 import Us from "./components/us";
+import AllProduct from "./components/AllProducts";
 
 function App() {
-  const router =createBrowserRouter ([
-    {
-      path:'/',
-      element: <> <Header/> <Home/> </>,
-    },
-    {
-      path:'/about',
-      element: <> <Header/> <About/></>
-    },
-    {
-      path:'/service',
-      element: <> <Header/> <Services/></>
-    },
-    {
-      path:'/contact',
-      element: <> <Header/> <Contact/></>
-    },
-    {
-      path:'/us',
-      element: <> <Header/> <Us/></>
-    },
-  ])
   return (
-    <div>
-      <RouterProvider router={router}/>
-    </div>
-  )
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/AllProduct" element={<AllProduct />}></Route>
+        <Route path="/Contact" element={<Contact />}></Route>
+        <Route path="/US" element={<Us />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
